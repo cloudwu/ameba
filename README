@@ -2,3 +2,4 @@ Ameba is multithread lib for lua 5.2(beta) . Each thread use an independent lua 
 
 See hello.lua for more detail.
 
+ps. I wrote a blog about it, http://blog.codingnow.com/2011/11/ameba_lua_52.html (In Chinese)

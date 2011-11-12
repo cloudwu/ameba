@@ -270,7 +270,7 @@ _new_ameba(lua_State *L) {
 	lua_pop(node->L,1);
 	lua_gc(node->L,LUA_GCCOLLECT,0);
 
-	lua_sethook(node->L,_hook,LUA_MASKCOUNT,20);
+	lua_sethook(node->L,_hook,LUA_MASKCOUNT,64);
 
 
 	lua_getfield(L,LUA_REGISTRYINDEX,"ameba");
