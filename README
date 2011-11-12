@@ -1,0 +1,4 @@
+Ameba is multithread lib for lua 5.2(beta) . Each thread use an independent lua state , they use channel to communicate each other.
+
+See hello.lua for more detail.
+
