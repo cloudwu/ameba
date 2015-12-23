@@ -1,5 +1,20 @@
-all : ameba.dll
+CC= gcc
+CCFLAGS= --shared -fPIC
+LUA_INC= /usr/local/include
+LUA_LIB= /usr/local/bin
+LUA_A= -llua
 
-ameba.dll : ameba.c
-	gcc -o $@ --shared -g -Wall -I/usr/local/include -L/usr/local/bin -llua52 $^
 
+default:
+	@echo Usage $(MAKE) windows/unix
+
+windows:
+	$(MAKE) lib NAME="dll"
+
+unix:
+	$(MAKE) lib NAME="so"
+
+OUT= ameba.$(NAME)
+
+lib : ameba.c
+	$(CC) -I$(LUA_INC) -L$(LUA_LIB) $(CCFLAGS) $(LUA_A) $^ -o $(OUT)

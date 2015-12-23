@@ -351,7 +351,7 @@ ameba_run(lua_State *L) {
 				head->next = head->next->next;
 				continue;
 			}
-			int r = lua_resume(nL , 0);
+			int r = lua_resume(nL , 0, 0);
 			if (r == LUA_YIELD) {
 				head = head->next;
 				continue;
